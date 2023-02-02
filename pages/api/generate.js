@@ -26,8 +26,8 @@ const generateAction = async (req, res) => {
   // I build Prompt #2.
   const secondPrompt = 
   `
-  Quiero amplies las siguientes afirmaciones destacando los valores positivos de las mismas. ${basePromptOutput.text}
-  `
+  Quiero amplies las siguientes afirmaciones destacando los valores positivos de las mismas ${basePromptOutput.text}
+  \n`
   
   // I call the OpenAI API a second time with Prompt #2
   const secondPromptCompletion = await openai.createCompletion({
